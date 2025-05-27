@@ -1,0 +1,283 @@
+/* Slider */
+
+
+.hero__section{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space between items */
+    padding: 2rem; /* Optional: Adds padding around the section */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+	
+	
+}
+.slick-slider
+{
+    position: relative;
+	flex: 0 0 65%; /* Do not grow, do not shrink, occupy 65% width */
+    max-width: 60%;
+    margin: 1rem;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cardx {
+	
+	min-width:300px;
+	flex: 0 0 30%; /* Do not grow, do not shrink, occupy 30% width */
+    max-width: 100%;
+    margin: 1rem; /* Optional: Adds space around the card */
+    background-color:#222831;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: #f8fafc;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+.slide-item {
+	padding: 0 5px;
+	outline: none;
+	cursor: pointer;
+}
+
+.slick-center.slide-item img {
+	padding: 0;
+	-webkit-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+.hero-slider .slick-track {
+	-webkit-transition: all 0.1s;
+	-o-transition: all 0.1s;
+	transition: all 0.1s;
+}
+
+.slide-item img {
+	height: 400px;
+	padding: 65px 0;
+	-webkit-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
+	margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+	.slide-item img {
+		padding: 0;
+	}
+}
+
+.hero-text-slider {
+	text-align: center;
+	padding-top: 5px;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+.cardx:hover{
+	background-color:#ffbe33;
+	.listsx ,.listx svg{
+		color: #000000;
+	}
+	.actionx{
+		background-color: #ffff;
+		color: #000000;
+	}
+	
+}
+				
+				
+				.titlex {
+				  font-size: 1.2rem;
+				  line-height: 2rem;
+				  font-weight: 700;
+				  color: #f8fafc90;
+				}
+				
+				.pricex {
+				  font-size: 3rem;
+				  line-height: 1;
+				  font-weight: 700;
+				  color: #f8fafc;
+				}
+				
+				.descx {
+				  margin-top: 0.75rem;
+				  margin-bottom: 0.75rem;
+				  line-height: 1.625;
+				  text-wrap: pretty;
+				  color: #f7fbff;
+				}
+				
+				.listsx {
+				  margin-bottom: 1.5rem;
+				  flex: 1 1 0%;
+				  color: #ffffff;
+				}
+				
+				.listsx .listx {
+				  margin-bottom: 0.5rem;
+				  display: flex;
+				  margin-left: 0.5rem;
+				}
+				
+				.listsx .listx svg {
+				  height: 1.5rem;
+				  width: 1.5rem;
+				  flex-shrink: 0;
+				  margin-right: 0.5rem;
+				  color: #ffbe33;
+				}
+				
+				.actionx {
+				  border: none;
+				  outline: none;
+				  display: inline-block;
+				  border-radius: 0.5rem;
+				  background-color: #ffbe33;
+				  padding-left: 1.25rem;
+				  padding-right: 1.25rem;
+				  padding-top: 0.75rem;
+				  padding-bottom: 0.75rem;
+				  text-align: center;
+				  font-weight: 600;
+				  letter-spacing: 0.05em;
+				  color: #f8fafc;
+				  cursor: pointer;
+				  transition: all 0.3s ease-in-out;
+				
+				  &:hover {
+					background-color: #d8cfbe;
+				  }
+				}
+				

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the forms */
+.container {
+    background-color: #ffffff;
+    width: 380px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+}
+
+/* Form Container */
+.form-container {
+    position: relative;
+    width: 200%;
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Individual Forms */
+.form {
+    width: 50%;
+    padding: 20px 40px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background: transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color:#e49132;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-size: 14px;
+    color: #555;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Floating label effect */
+.input-group input:focus + label,.input-group input:valid + label {
+    top: -10px;
+    left: 8px;
+    font-size: 12px;
+    color: #e49132;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e49132;;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f08206;;
+}
+
+.form p {
+    margin-top: 15px;
+    text-align: center;
+    color: #777;
+}
+
+.form p a {
+    color: #e49132;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form p a:hover {
+    text-decoration: underline;
+}
+
+/* Active Form Styles */
+.form-container.active {
+    transform: translateX(-50%);
+}
+
+/* Responsive Design */
+@media (max-width: 420px) {
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .form {
+        padding: 20px;
+    }
+}

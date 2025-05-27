@@ -1,0 +1,276 @@
+/* Offer Section Styling */
+.offer_section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh; /* Full height */
+    background: linear-gradient(to bottom, #000000, #0a0a0a, #1e1c1c, #917f73, #fff);  /*  background-image: url('https://cdn.wedevs.com/uploads/2021/04/Limited-Time-Offer_-How-To-Write-a-Discount-Offer-For-Limited-Time-Only.png');*/
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    overflow: hidden;
+    
+}
+.offer_left {
+    flex: 0 0 50%;
+    flex-direction: column;
+   position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%; /* Left side takes 50% of the screen */
+    padding-left: 20px;
+
+    animation: slideInLeft 2s ease forwards;
+  }
+  
+  .offer_text {
+    font-size: 4rem;
+    font-weight: bold;
+    color:#ffbe33;
+    margin: 0;
+    animation: moveLeft 2s ease forwards;
+  }
+  
+  .offer_bar {
+    width: 100px;
+    height: 4px;
+    background-color: #ffbe33;
+    margin-top: 10px;
+    animation: expandBar 2s ease forwards;
+  }
+  
+.offer_container {
+    width: 50%; /* Right side takes 50% of the screen */
+    flex: 0 0 50%;
+  justify-content: flex-end;
+  padding-right: 20px;
+  animation: slideInRight 2s ease forwards;
+    align-items: center;
+    background:none;
+    margin-top: -10%;
+}
+@keyframes moveLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+  
+  @keyframes expandBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100px;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+  
+  /* Optional: style the dynamic content */
+  .containerOFF {
+    width: 100%;
+    background:none;
+    padding: 20px;
+  
+  }
+
+#offer_row {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+/* Slide-in Effect */
+.slide-in-left {
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Offer Card Styling */
+.box1 {
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 150%;
+    height: 110%;
+    display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+
+
+.img-box1 {
+    width: 175px;
+  min-width: 175px;
+  height: 175px;
+  margin-right: 15px;
+  position: relative;
+  -webkit-transition: all 0.1 0.5s;
+  transition: all 0.1 0.5s;
+  border-radius: 100%;
+  border: 5px solid #ffbe33;
+  overflow: hidden;
+
+}
+
+.img-box1 img {
+  width: 100%;
+  height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.box1:hover .img-box1 img {
+    transform: scale(1.1);
+}
+
+/* Offer Details Styling */
+.detail-box1 {
+    flex: 2;
+    text-align: center;
+    padding: 10px;
+}
+
+.detail-box1 h5 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.detail-box1 h6 {
+    font-size: 18px;
+    color:#ffbe33;
+}
+
+.detail-box1 a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffbe33;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.detail-box1 a:hover {
+    background-color: #ffbe33;
+}
+
+/* Slider Navigation Dots */
+.slider-nav {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-bottom:10px;
+    justify-content: center;
+    transform: translateX(-50%);
+    transform: translateY(200px);
+
+}
+
+.slider-nav span {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-nav span.active {
+    background-color: #e7973c;
+}
+
+.slider-nav span:hover {
+    background-color: #ffffff;
+}
+/* Slide in from left with overlap */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(100%); /* Start off the screen to the right */
+        opacity: 0;
+    }
+    50% {
+        opacity: 1; /* Begin to appear halfway through the transition */
+    }
+    100% {
+        transform: translateX(0); /* Fully enter */
+        opacity: 1;
+    }
+}
+
+/* Slide out to left with overlap */
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0); /* Start in the current position */
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0); /* Move off the screen to the left */
+        opacity: 1;
+    }
+}
+
+/* Ensure the cards occupy the same position to overlap properly */
+#offer_row {
+    overflow: hidden; /* Prevent any overflow during sliding */
+    height: auto; /* Set a fixed height based on your card design */
+}
+
+.col-md-6 {
+    position: absolute; /* Ensure cards overlap during the transition */
+  
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+/* slider section */
+
+
+  
+ 
